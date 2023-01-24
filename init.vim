@@ -1,9 +1,6 @@
 
 call plug#begin()
 
-" https://github.com/mmorhetz/gruvbox
-Plug 'morhetz/gruvbox'
-
 " airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -39,15 +36,11 @@ lua require("init")
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <silent> nf :NERDTreeFind<CR> 
 
-" colorscheme
-set background=dark
-colorscheme gruvbox
-
 " fzf
-nnoremap <C-p> :GFiles<CR>
-nnoremap <C-g> :Rg <C-R><C-W><CR>
-nnoremap <C-l> :BLines<CR>
-nnoremap <silent> <Space> :Buffers<CR>
+" nnoremap <C-p> :GFiles<CR>
+" nnoremap <C-g> :Rg <C-R><C-W><CR>
+" nnoremap <C-l> :BLines<CR>
+" nnoremap <silent> <Space> :Buffers<CR>
 
 " replcare shortcat
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
