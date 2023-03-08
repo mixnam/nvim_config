@@ -9,10 +9,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
 " neovim/nvim-lspconfig
 Plug 'neovim/nvim-lspconfig'
 
@@ -33,14 +29,9 @@ lua require("init")
 
 " NERDTree opts
 " autocmd vimenter * NERDTree
+let g:NERDTreeWinSize=60
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <silent> nf :NERDTreeFind<CR> 
-
-" fzf
-" nnoremap <C-p> :GFiles<CR>
-" nnoremap <C-g> :Rg <C-R><C-W><CR>
-" nnoremap <C-l> :BLines<CR>
-" nnoremap <silent> <Space> :Buffers<CR>
 
 " replcare shortcat
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
