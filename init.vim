@@ -5,10 +5,6 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" https://github.com/scrooloose/nerdtree
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
 " neovim/nvim-lspconfig
 Plug 'neovim/nvim-lspconfig'
 
@@ -26,12 +22,6 @@ Plug 'tpope/vim-commentary'
 call plug#end()
 
 lua require("init")
-
-" NERDTree opts
-" autocmd vimenter * NERDTree
-let g:NERDTreeWinSize=60
-map <C-n> :NERDTreeToggle<CR>
-nnoremap <silent> nf :NERDTreeFind<CR> 
 
 " replcare shortcat
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>

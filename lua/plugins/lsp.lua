@@ -1,6 +1,8 @@
 vim.lsp.set_log_level("debug")
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local cmp = require 'cmp'
 
@@ -138,3 +140,18 @@ require 'lspconfig'.sumneko_lua.setup {
     },
 }
 
+require 'lspconfig'.solidity_ls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach
+})
+
+require 'lspconfig'.glslls.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    cmd = { 'glslls', '--stdin', '--target-env', 'opengl' },
+}
+
+require 'lspconfig'.clangd.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+}

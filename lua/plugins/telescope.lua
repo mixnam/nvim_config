@@ -13,6 +13,9 @@ telescope.setup {
         }
     },
     extensions = {
+        harpoon = {
+            initial_mode = 'normal'
+        },
         live_grep_args = {
             -- auto_quoting = true, -- enable/disable auto-quoting
             mappings = {
@@ -25,10 +28,10 @@ telescope.setup {
     }
 }
 
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<C-g>', builtin.grep_string, {})
-vim.keymap.set('n', 'tr', ':Telescope resume<CR>', {})
-vim.keymap.set('n', 'ts', ':Telescope git_status<CR>', {})
+vim.keymap.set('n', '<leader>tf', builtin.find_files, {})
+vim.keymap.set('n', '<leader>tg', builtin.grep_string, {})
+vim.keymap.set('n', '<leader>tr', ':Telescope resume<CR>', {})
+vim.keymap.set('n', '<leader>ts', ':Telescope git_status<CR>', {})
 vim.keymap.set('n', 'gg', telescope.extensions.live_grep_args.live_grep_args, {})
 vim.keymap.set('n', 'gr', function()
     builtin.lsp_references({
@@ -39,7 +42,8 @@ vim.keymap.set('n', 'gr', function()
     })
 end, {})
 
-vim.keymap.set('n', '<Space>', builtin.buffers, {})
+vim.keymap.set('n', "<Tab>", builtin.buffers, {})
+vim.keymap.set('n', '<C-i>', '<C-i>', {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- clear after local search

@@ -23,4 +23,15 @@ return require 'packer'.startup(function(use)
     use {
         'lewis6991/gitsigns.nvim'
     }
+
+    use {
+        'tikhomirov/vim-glsl'
+    }
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+    }
 end)
