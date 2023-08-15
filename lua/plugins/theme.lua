@@ -1,6 +1,8 @@
 require("gruvbox").setup({
     transparent_mode = true,
-    italic = false,
+    italic = {
+        strings = false
+    },
     contrast = "hard",
     bold = false,
 })
