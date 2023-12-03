@@ -1,5 +1,8 @@
 vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = false })
+
 vim.g.mapleader = " "
+
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {})
 
 require 'plugins'
 require 'plugins.telescope'
